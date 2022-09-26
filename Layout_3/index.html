@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+		body {
+            margin: 0;
+            font-family: sans-serif;
+			display: grid;
+			width: 960px;
+			margin: 20px auto;
+			grid-gap: 20px;
+			grid-template-columns: repeat(4, 1fr);
+			grid-template-rows: 80px 400px 50px 200px 200px 50px;
+			grid-template-areas:
+				"logo . navigation  navigation"
+				"header header      header header"
+				"title1 .           title2 ."
+				"blogPost1  blogPost1       featuredProduct1 featuredProduct2"
+				"blogPost2  blogPost2       featuredProduct3 featuredProduct4"
+				"footer footer      footer  footer";            
+        }
+		div, nav ul, header, h1, a, section, footer {
+            background: silver;
+        } 
+		h1 {
+            font-size: 2.7rem;
+        }
+		h2 {
+            font-size: 1.45rem;
+        }
+		header {
+			grid-area: header;
+			padding: 50px;
+		}
+		nav {
+			grid-area: navigation;
+			align-self: center;
+		}
+		nav ul {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			display: grid;
+			height: 50px;
+			grid-template: auto / repeat(4, 1fr);
+			grid-gap: 20px;
+			align-content: center;
+			justify-items: center;
+		}
+		div:nth-of-type(1) {
+			grid-area: logo;
+		}
+		div:nth-of-type(2) {
+			grid-area: title1;
+		}
+		div:nth-of-type(3) {
+			grid-area: title2;
+		}
+		.blogPost1 {
+			grid-area: blogPost1;
+		}
+		.featuredProduct1 {
+			grid-area: featuredProduct1;
+		}
+		.featuredProduct2 {
+			grid-area: featuredProduct2;
+		}
+		.blogPost2 {
+			grid-area: blogPost2;
+		}
+		.featuredProduct3 {
+			grid-area: featuredProduct3;
+		}
+		.featuredProduct4 {
+			grid-area: featuredProduct4;
+		}
+		footer {
+			grid-area: footer;
+			text-align: center;
+		}
+    </style>
+    <title>Layout 3</title>
+</head>
+<body>
+	<div>Company Logo</div>
+    <nav>
+    	<ul>
+        	<li>Item 1</li>
+        	<li>Item 2</li>
+        	<li>Item 3</li>
+        	<li>Item 4</li>
+        </ul>
+    </nav>
+    <header>
+        <h1>Lorem ipsum dolor sit amet, ne saepe phaedrum cotidieque has, natum zril pro.</h1>
+        <h2>Cu vel aliquid lobortis deseruisse. Nam at adipisci dignissim forensibus. Qui an recteque maluisset assentior, cu ferri aperiam imperdiet sed.</h2>
+    </header>
+    <div>Title</div>
+    <div>Title</div>
+    <section class="blogPost1">Blog Post 1</section>
+    <section class="featuredProduct1">Featured Product 1</section>
+    <section class="featuredProduct2">Featured Product 2</section>
+    <section class="blogPost2">Blog Post 2</section>
+    <section class="featuredProduct3">Featured Product 3</section>
+    <section class="featuredProduct4">Featured Product 4</section>
+    <footer>
+        <p>Copyright Notice</p>
+    </footer>
+</body>
+</html>
